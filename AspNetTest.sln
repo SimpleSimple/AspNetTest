@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest", "AspNetTest\AspNetTest.csproj", "{9634F02C-5EDD-481B-A51D-0FC972BC7E41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest.Utility", "AspNetTest.Utility\AspNetTest.Utility.csproj", "{266BBB0B-9E8F-401C-8089-AB76DF963EFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9634F02C-5EDD-481B-A51D-0FC972BC7E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9634F02C-5EDD-481B-A51D-0FC972BC7E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9634F02C-5EDD-481B-A51D-0FC972BC7E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9634F02C-5EDD-481B-A51D-0FC972BC7E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{266BBB0B-9E8F-401C-8089-AB76DF963EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266BBB0B-9E8F-401C-8089-AB76DF963EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266BBB0B-9E8F-401C-8089-AB76DF963EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266BBB0B-9E8F-401C-8089-AB76DF963EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
