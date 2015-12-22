@@ -154,13 +154,13 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AspNetTest.Utility\AspNetTest.Utility.csproj">
-      <Project>{266BBB0B-9E8F-401C-8089-AB76DF963EFE}</Project>
-      <Name>AspNetTest.Utility</Name>
-    </ProjectReference>
+    <Content Include="ASHX\AjaxHandler.ashx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ASHX\AjaxHandler.ashx" />
+    <ProjectReference Include="..\ANT.Common\ANT.Common.csproj">
+      <Project>{266BBB0B-9E8F-401C-8089-AB76DF963EFE}</Project>
+      <Name>ANT.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
