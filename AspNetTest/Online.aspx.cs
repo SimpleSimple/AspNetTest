@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace AspNetTest
 {
-    public partial class About : System.Web.UI.Page
+    public partial class Online : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
