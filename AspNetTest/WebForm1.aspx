@@ -13,15 +13,20 @@
         <form class="form-group" action="" method="post">
         <input type="hidden" name="act" value="login" />
         <div class="single-line">
-            用户名：<input class="input" type="text" name="UserName" id="UserName" /><span class="tips"></span>
+            用户名：<input class="input" type="text" name="UserName" id="UserName" /><span class="error"></span>
+        </div>
+        <div class="single-line">
+            密码 ：<input class="input" type="password" name="UserPass" id="UserPass" /><span class="error"></span>
         </div>
         <div class="single-line">
             验证码：<input class="input" type="text" name="VCode" id="VCode" onblur="CheckValidCode(this);" />
             <img id="VCodeImage" src="GetVCode.aspx" alt="看不清楚，请点击" style="width: 80px; height: 25px;" />
-            <div class="tips"></div>
+            <span class="error"></span>
         </div>
-        <button class="btn-submit" onclick="javascript:CheckFormValidate(); return false;">
-            Log In</button>
+        <div class="single-line">
+            <button class="btn-submit" onclick="return CheckFormValidate()">
+                Log In</button>
+        </div>
         </form>
     </div>
     <script src="js/page/webform1.js" type="text/javascript"></script>

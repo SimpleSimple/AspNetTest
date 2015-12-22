@@ -1,26 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ServiceStack.Redis;
-using System.Configuration;
-
-namespace Console.Tests
+﻿namespace ConsoleTests
 {
+    public class Incr
+    {
+        public long Id { get; set; }
+    }
+
+    public class IncrResponse
+    {
+        public long Result { get; set; }
+    }
+
     class Program
     {
-        static string host = ConfigurationManager.AppSettings["redisip"];
-        static int port = Convert.ToInt32(ConfigurationManager.AppSettings["port"]);
-
-        static RedisClient client = new RedisClient(host, port);
-
         static void Main(string[] args)
         {
-            //获取所有的key
-            var list = client.GetAllKeys();
-            list.ForEach(a => System.Console.WriteLine(a.ToString()));
+            //new LongRunningRedisPubSubServer().Execute("10.0.0.9");
+            //new HashStressTest().Execute("127.0.0.1");
+            //new HashStressTest().Execute("10.0.0.9");
+            //new HashCollectionStressTests().Execute("10.0.0.9", noOfThreads: 64);
 
-            
+            //new LocalRedisSentinelFailoverTests
+            //{
+            //    StartAndStopRedisServers = true
+            //}.Execute();
+
+            //new LocalRedisSentinelFailoverTests {
+            //    UseRedisManagerPool = true, StartAndStopRedisServers = false }.Execute();
+            //new LocalRedisSentinelFailoverTests().Execute();
+
+            //new NetworkRedisSentinelFailoverTests().Execute();
+
+            //new GoogleRedisSentinelFailoverTests().Execute();
+
+            //new ForceFailover().Execute();
+
+            new BlockingPop().Execute();
         }
     }
 }

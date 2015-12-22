@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{266BBB0B-9E8F-401C-8089-AB76DF963EFE}</ProjectGuid>
+    <ProjectGuid>{A180AAD8-4865-40A3-87AD-A823E8B796E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AspNetTest.Utility</RootNamespace>
-    <AssemblyName>AspNetTest.Utility</AssemblyName>
+    <RootNamespace>ANT.Common</RootNamespace>
+    <AssemblyName>ANT.Common</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,10 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="PageBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VerifyCodeImage.cs" />
-    <Compile Include="WebMethod.cs" />
-    <Compile Include="YZMHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

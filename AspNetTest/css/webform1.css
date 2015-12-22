@@ -1,4 +1,15 @@
-﻿.input
+﻿body
 {
-height:25px;
-    }
+    font-size: 12px;
+}
+
+.single-line
+{
+    height: 30px;
+    line-height: 30px;
+}
+
+.error
+{
+    color: red;
+}

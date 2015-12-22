@@ -1,25 +1,25 @@
 ﻿function CheckValidCode() {
     var $vcode = $.trim($("#VCode").val());
+    var valid = false;
     $.ajax({
         url: "/ASHX/AjaxHandler.ashx",
         data: { "type": "CHECKVALIDATECODE", "vcode": $vcode },
         dataType: "json",
         async: false,
         success: function (response) {
-            if (response.State == -1) {
-                $("#VCode").parent().children(".tips").html(response.Msg);
-                return;
+            console.log(response.State);
+            if (response.State == -1 || response.State == -2) {
+                $("#VCode").parent().children(".error").html(response.Msg);
+                $("#VCodeImage").trigger("click");
+                valid = false;
             }
-            if (response.State == -2) {
-                $("#VCode").parent().children(".tips").html(response.Msg);
-                //window.location.href = window.location.href;
-                return;
-            }
-            if (response.State == 0) {
-                $("#VCode").parent().children(".tips").html(response.Msg);
+            else if (response.State == 0) {
+                $("#VCode").parent().children(".error").html(response.Msg);
+                valid = true;
             }
         }
     });
+    return valid;
 }
 
 function CheckFormValidate() {
@@ -27,38 +27,33 @@ function CheckFormValidate() {
     var uname = $.trim($("#UserName").val());
     if (uname == "") {
         $("#UserName").focus();
-        $("#UserName").parent().children(".tips").html("用户名不能为空");
+        $("#UserName").parent().children(".error").html("用户名不能为空");
+        return false;
+    }
+    var passwd = $.trim($("#UserPass").val());
+    if (passwd == "") {
+        $("#UserPass").focus();
+        $("#UserPass").parent().children(".error").html("密码不能为空");
         return false;
     }
     var $vcode = $.trim($("#VCode").val());
     if ($vcode == "") {
         $("#VCode").focus();
-        $("#VCode").parent().children(".tips").html("验证码不能为空");
+        $("#VCode").parent().children(".error").html("验证码不能为空");
         return false;
     }
-    //    var valid;
-    //    $.ajax({
-    //        url: "/ASHX/AjaxHandler.ashx",
-    //        data: { "type": "CHECKVALIDATECODE", "vcode": $vcode },
-    //        dataType: "json",
-    //        async: false,
-    //        success: function (response) {
-    //            if (response.State == -1) {
-    //                valid = false;
-    //                alert(response.Msg);
-    //            }
-    //            if (response.State == 0) {
-    //                valid = true;
-    //                alert(response.Msg);
-    //            }
-    //        }
-    //    });
-    //    return valid;
+
+    var valid = CheckValidCode();
+    if (valid == false) return false;
 }
 
 
-$(function () {
+function RefreshValidCode() {
     $("#VCodeImage").bind("click", function () {
         $(this).attr("src", "/GetVCode.aspx?t=" + new Date().getDate() + new Date().getMilliseconds());
     });
+}
+
+$(function () {
+    RefreshValidCode();
 });

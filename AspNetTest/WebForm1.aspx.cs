@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ANT.Common;
 
 namespace AspNetTest
 {
@@ -14,20 +15,30 @@ namespace AspNetTest
             string act = Request["act"] != null ? Request["act"].ToString() : "";
             if (act == "login")
             {
-                string userName = Request["UserName"] != null ? Request["UserName"].ToString() : "";
+                string username = Request["UserName"] != null ? Request["UserName"].ToString() : "";
                 string code = Request["VCode"] != null ? Request["VCode"].ToString() : "";
+                string userpwd = Request["UserPass"] != null ? Request["UserPass"] : "";
 
-                if (string.IsNullOrEmpty(userName))
+                if (!string.IsNullOrEmpty(username) && username != "admin")
                 {
-                    return;
+                    //MessageBox.ShowAndRedirect(this.Page, "用户名错误", "WebForm1.aspx");
+                    Response.Write("<script language='javascript'>alert('用户名错误');history.go(-1)</script>");
                 }
 
-                if (userName == "admin" && code.ToLower() == Session["VerifyCode"].ToString().ToLower())
+                if (code.ToLower() != Session["VerifyCode"].ToString().ToLower())
+                {
+                    Response.Write("<script language='javascript'>alert('验证错误');history.go(-1)</script>");
+                }
+
+                if (username == "admin" && userpwd == "admin" && code.ToLower() == Session["VerifyCode"].ToString().ToLower())
                 {
                     Response.Redirect("WebForm1.aspx?state=SignIn");
                 }
                 else
-                    Response.Redirect("WebForm1.aspx?state=SignOut");
+                {
+                    MessageBox.Show(this.Page, "用户名或密码错误");
+                    return;
+                }
             }
         }
     }
