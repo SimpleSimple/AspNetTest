@@ -14,5 +14,7 @@ namespace ANT.Model
         public DateTime signin_time { get; set; }
 
         public DateTime signout_time { get; set; }
+
+        public DateTime create_time { get; set; }
     }
 }

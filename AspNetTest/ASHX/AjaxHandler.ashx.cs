@@ -12,7 +12,6 @@ namespace AspNetTest.ASHX
 {
     public class AjaxHandler : IHttpHandler, IRequiresSessionState
     {
-
         public void ProcessRequest(HttpContext context)
         {
             string act = context.Request.Params["type"].ToString();
@@ -57,7 +56,8 @@ namespace AspNetTest.ASHX
                     id = x.id,
                     user_id = x.user_id,
                     signin_time = x.signin_time.ToString("yyyy-MM-dd HH:mm:ss"),
-                    signout_time = x.signout_time.ToString("yyyy-MM-dd HH:mm:ss")
+                    signout_time = x.signout_time.ToString("yyyy-MM-dd HH:mm:ss"),
+                    create_time = x.create_time.ToString("yyyy-MM-dd HH:mm:ss")
                 });
             string strJSON = JsonConvert.SerializeObject(list);
             HttpContext.Current.Response.Write(strJSON);

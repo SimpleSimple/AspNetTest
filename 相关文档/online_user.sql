@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2015-12-29 18:27:49
+Date: 2015-12-29 18:36:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,8 +26,13 @@ CREATE TABLE `online_user` (
   `signout_time` datetime DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of online_user
 -- ----------------------------
+INSERT INTO `online_user` VALUES ('1', '1680001', '2015-12-29 17:36:14', '2015-12-29 18:36:14', '2015-12-29 18:36:14');
+INSERT INTO `online_user` VALUES ('2', '1680002', '2015-12-29 17:36:14', '2015-12-29 18:36:14', '2015-12-29 18:36:14');
+INSERT INTO `online_user` VALUES ('3', '1680003', '2015-12-29 17:36:14', '2015-12-29 18:36:14', '2015-12-29 18:36:14');
+INSERT INTO `online_user` VALUES ('4', '1680004', '2015-12-29 17:36:14', '2015-12-29 18:36:14', '2015-12-29 18:36:14');
+INSERT INTO `online_user` VALUES ('5', '1680005', '2015-12-29 17:36:14', '2015-12-29 18:36:14', '2015-12-29 18:36:14');
