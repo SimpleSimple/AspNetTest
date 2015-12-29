@@ -40,7 +40,7 @@ namespace TrieTreeConsole.Test
                 }
             }
 
-            string word = "小日本最近又在搞什么政治倾向,测试看是否可以到腾讯QQ字段";
+            string word = "小日本最近又在搞什么政治倾向,测试看是否可以到腾讯QQ字段#华臣天拓#";
             List<string> ResultList = Tree.SearchWords(word);
             foreach (string result in ResultList)
             {

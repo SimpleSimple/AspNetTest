@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtility", "DBUtility\DBUt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Console.Test", "Project.Console.Test\Project.Console.Test.csproj", "{6F026B68-87D3-4117-AC2B-3C07D90F4C9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANT.Model", "ANT.Model\ANT.Model.csproj", "{48923788-21FD-445F-B102-0763CC9E4305}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = AspNetTest.vsmdi
@@ -96,6 +98,16 @@ Global
 		{6F026B68-87D3-4117-AC2B-3C07D90F4C9D}.Release|Mixed Platforms.Build.0 = Release|x86
 		{6F026B68-87D3-4117-AC2B-3C07D90F4C9D}.Release|x86.ActiveCfg = Release|x86
 		{6F026B68-87D3-4117-AC2B-3C07D90F4C9D}.Release|x86.Build.0 = Release|x86
+		{48923788-21FD-445F-B102-0763CC9E4305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48923788-21FD-445F-B102-0763CC9E4305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48923788-21FD-445F-B102-0763CC9E4305}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{48923788-21FD-445F-B102-0763CC9E4305}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{48923788-21FD-445F-B102-0763CC9E4305}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{48923788-21FD-445F-B102-0763CC9E4305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48923788-21FD-445F-B102-0763CC9E4305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48923788-21FD-445F-B102-0763CC9E4305}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{48923788-21FD-445F-B102-0763CC9E4305}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{48923788-21FD-445F-B102-0763CC9E4305}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

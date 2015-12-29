@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.SessionState;
+using DBUtility;
+using ANT.Model;
+using Newtonsoft.Json;
 
 
 namespace AspNetTest.ASHX
 {
-    /// <summary>
-    /// AjaxHandler 的摘要说明
-    /// </summary>
     public class AjaxHandler : IHttpHandler, IRequiresSessionState
     {
 
@@ -20,6 +20,9 @@ namespace AspNetTest.ASHX
             {
                 case "CHECKVALIDATECODE":
                     CheckValidateCode();
+                    break;
+                case "GETONLINES":
+                    GetOnlines();
                     break;
                 default: break;
             }
@@ -43,6 +46,22 @@ namespace AspNetTest.ASHX
                 HttpContext.Current.Response.Write("{\"Data\":\"suceess\",\"State\":\"0\",\"Msg\":\"验证成功\"}");
                 HttpContext.Current.Response.End();
             }
+        }
+
+        private void GetOnlines()
+        {
+            string strSql = "select * from online_user";
+            var list = MySqlHelper.ExecuteObjects<OnlineUser>(PublicConstant.MySqlDB, strSql, null)
+                .Select(x => new
+                {
+                    id = x.id,
+                    user_id = x.user_id,
+                    signin_time = x.signin_time.ToString("yyyy-MM-dd HH:mm:ss"),
+                    signout_time = x.signout_time.ToString("yyyy-MM-dd HH:mm:ss")
+                });
+            string strJSON = JsonConvert.SerializeObject(list);
+            HttpContext.Current.Response.Write(strJSON);
+            HttpContext.Current.Response.End();
         }
 
         public bool IsReusable

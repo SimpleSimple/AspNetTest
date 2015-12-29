@@ -16,5 +16,21 @@ namespace AspNetTest.Utility
 
             return defaultVal;
         }
+
+        public static string GetString(string paramaterName)
+        {
+            if (!string.IsNullOrEmpty(request[paramaterName]))
+                return request[paramaterName];
+
+            return string.Empty;
+        }
+
+        public static string GetString(string paramaterName, string defaultVal)
+        {
+            if (!string.IsNullOrEmpty(request[paramaterName]))
+                return request[paramaterName];
+
+            return defaultVal;
+        }
     }
 }

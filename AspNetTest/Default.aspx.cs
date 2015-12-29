@@ -20,7 +20,7 @@ namespace AspNetTest
                 Name = "zhanggensuo",
                 Age = 25
             };
-            Response.Write("序列化值："+SerializerObject(person));
+            Response.Write("序列化值：" + SerializerObject(person));
 
         }
 
