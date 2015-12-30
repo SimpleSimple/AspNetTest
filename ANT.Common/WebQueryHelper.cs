@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AspNetTest.Utility
 {
-    public class WebMethod
+    public class WebQueryHelper
     {
         static System.Web.HttpRequest request = System.Web.HttpContext.Current.Request;
 

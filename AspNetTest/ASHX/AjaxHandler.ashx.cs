@@ -7,7 +7,6 @@ using DBUtility;
 using ANT.Model;
 using Newtonsoft.Json;
 
-
 namespace AspNetTest.ASHX
 {
     public class AjaxHandler : IHttpHandler, IRequiresSessionState
@@ -49,7 +48,7 @@ namespace AspNetTest.ASHX
 
         private void GetOnlines()
         {
-            string strSql = "select * from online_user";
+            string strSql = "select * from online_user group by to_time(signin_time)";
             var list = MySqlHelper.ExecuteObjects<OnlineUser>(PublicConstant.MySqlDB, strSql, null)
                 .Select(x => new
                 {
