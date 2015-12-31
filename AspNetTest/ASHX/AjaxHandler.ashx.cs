@@ -7,7 +7,7 @@ using DBUtility;
 using ANT.Model;
 using Newtonsoft.Json;
 
-namespace AspNetTest.ASHX
+namespace AspNetTest.Ashx
 {
     public class AjaxHandler : IHttpHandler, IRequiresSessionState
     {
@@ -48,15 +48,13 @@ namespace AspNetTest.ASHX
 
         private void GetOnlines()
         {
-            string strSql = "select * from online_user group by to_time(signin_time)";
-            var list = MySqlHelper.ExecuteObjects<OnlineUser>(PublicConstant.MySqlDB, strSql, null)
+            string strSql = @"select DATE_FORMAT(signin_time, '%H:%i:%s') tick, count(1) totals from online_user 
+                where date(signin_time)=date(now()) group by DATE_FORMAT(signin_time, '%H:%i:%s')";
+            var list = MySqlHelper.ExecuteObjects<OnlineStatsViewModel>(PublicConstant.MySqlDB, strSql, null)
                 .Select(x => new
                 {
-                    id = x.id,
-                    user_id = x.user_id,
-                    signin_time = x.signin_time.ToString("yyyy-MM-dd HH:mm:ss"),
-                    signout_time = x.signout_time.ToString("yyyy-MM-dd HH:mm:ss"),
-                    create_time = x.create_time.ToString("yyyy-MM-dd HH:mm:ss")
+                    tick = x.tick.ToString(),
+                    totals = x.totals
                 });
             string strJSON = JsonConvert.SerializeObject(list);
             HttpContext.Current.Response.Write(strJSON);
