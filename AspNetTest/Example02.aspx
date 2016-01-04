@@ -14,7 +14,7 @@
         </div>
     </div>
     </form>
-    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script src="http://echarts.baidu.com/build/dist/echarts.js" type="text/javascript"></script>
 
     <script src="js/page/example02.js" type="text/javascript"></script>
 </body>
