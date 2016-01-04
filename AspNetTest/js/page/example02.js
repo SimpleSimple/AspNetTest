@@ -15,7 +15,6 @@ function init() {
                      'echarts/chart/map'
                  ],
                  function (ec) {
-                     console.log("init...");
                      var myChart = ec.init(document.getElementById('main'));
 
                      var dates = "", seriesArr = "";
