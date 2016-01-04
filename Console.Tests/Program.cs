@@ -33,7 +33,11 @@ namespace ConsoleTests
         static void Redis_GetAllKeys_Test()
         {
             Console.WriteLine("显示所有KEYS，共" + client.GetAllKeys().Count + "条");
-            client.GetAllKeys().ForEach(x => Console.WriteLine("-->" + x.ToString()));
+            client.GetAllKeys().ForEach(x => Console.WriteLine("-->" + x.ToString() + "  "));
+            if (client.ContainsKey("Person"))
+            {
+                Console.WriteLine("包含Key：Person");
+            }
         }
 
         static void RedisClient_Test()
