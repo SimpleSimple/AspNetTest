@@ -1,4 +1,4 @@
-﻿namespace AspNetTest.Utility
+﻿namespace AspNetTest.Common
 {
     using System;
     using System.Drawing;
@@ -53,7 +53,7 @@
             {
                 int index = random.Next(this.Colors.Length - 1);
                 int num16 = random.Next(this.Fonts.Length - 1);
-                Font font = new Font(this.Fonts[num16], (float) fontSize, FontStyle.Bold);
+                Font font = new Font(this.Fonts[num16], (float)fontSize, FontStyle.Bold);
                 Brush brush = new SolidBrush(this.Colors[index]);
                 if ((num6 % 2) == 1)
                 {
@@ -64,7 +64,7 @@
                     num10 = num11;
                 }
                 num9 = num6 * num2;
-                graphics.DrawString(code.Substring(num6, 1), font, brush, (float) num9, (float) num10);
+                graphics.DrawString(code.Substring(num6, 1), font, brush, (float)num9, (float)num10);
             }
             graphics.DrawRectangle(new Pen(Color.Gainsboro, 0f), 0, 0, image.Width - 1, image.Height - 1);
             graphics.Dispose();
@@ -99,7 +99,7 @@
             string[] strArray = this.CodeSerial.Split(new char[] { ',' });
             string str = "";
             int index = -1;
-            Random random = new Random((int) DateTime.Now.Ticks);
+            Random random = new Random((int)DateTime.Now.Ticks);
             for (int i = 0; i < codeLength; i++)
             {
                 index = random.Next(0, strArray.Length - 1);
@@ -114,7 +114,7 @@
             Graphics graphics = Graphics.FromImage(image);
             graphics.FillRectangle(new SolidBrush(Color.White), 0, 0, image.Width, image.Height);
             graphics.Dispose();
-            double num = bXDir ? ((double) image.Height) : ((double) image.Width);
+            double num = bXDir ? ((double)image.Height) : ((double)image.Width);
             for (int i = 0; i < image.Width; i++)
             {
                 for (int j = 0; j < image.Height; j++)
@@ -125,8 +125,8 @@
                     double num5 = Math.Sin(a);
                     int x = 0;
                     int y = 0;
-                    x = bXDir ? (i + ((int) (num5 * dMultValue))) : i;
-                    y = bXDir ? j : (j + ((int) (num5 * dMultValue)));
+                    x = bXDir ? (i + ((int)(num5 * dMultValue))) : i;
+                    y = bXDir ? j : (j + ((int)(num5 * dMultValue)));
                     Color pixel = srcBmp.GetPixel(i, j);
                     if ((((x >= 0) && (x < image.Width)) && (y >= 0)) && (y < image.Height))
                     {
