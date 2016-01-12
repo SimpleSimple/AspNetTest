@@ -1,12 +1,22 @@
-﻿using ServiceStack.Redis;
-namespace ConsoleTests
+﻿using System.Collections.Generic;
+using Console.Tests.Entity;
+
+namespace Console.Tests
 {
+    using ServiceStack.Text;
+    using ServiceStack.Redis;
     using System;
-    using System.Collections.Generic;
+
     class Program
     {
+        static RedisClient client = new RedisClient("127.0.0.1", 6370);
+
         static void Main(string[] args)
         {
+            //ServiceStack.Licensing.RegisterLicense(@"1001-e1JlZjoxMDAxLE5hbWU6VGVzdCBCdXNpbmVzcyxUeXBlOkJ1c2luZXNzLEhhc2g6UHVNTVRPclhvT2ZIbjQ5MG5LZE1mUTd5RUMzQnBucTFEbTE3TDczVEF4QUNMT1FhNXJMOWkzVjFGL2ZkVTE3Q2pDNENqTkQyUktRWmhvUVBhYTBiekJGUUZ3ZE5aZHFDYm9hL3lydGlwUHI5K1JsaTBYbzNsUC85cjVJNHE5QVhldDN6QkE4aTlvdldrdTgyTk1relY2eis2dFFqTThYN2lmc0JveHgycFdjPSxFeHBpcnk6MjAxMy0wMS0wMX0=");
+            //var appHost = new AppHost();
+            //appHost.Init();
+
             Console.WriteLine("1. 显示所有KEYS\r\n2. 添加测试数据\r\n3. 删除所有KEYS\r\n4. 添加列表");
             Console.Write("输入选择：");
             int command = int.Parse(Console.ReadLine());
@@ -26,9 +36,21 @@ namespace ConsoleTests
                     break;
                 default: break;
             }
-        }
 
-        static RedisClient client = new RedisClient("127.0.0.1", 6370);
+            try
+            {
+                var redisUsers = client.As<User>();
+                redisUsers.Store(new User { Id = redisUsers.GetNextSequence(), Name = "mengluo" });
+                redisUsers.Store(new User { Id = redisUsers.GetNextSequence(), Name = "tianming" });
+
+                var allUsers = redisUsers.GetAll();
+                Console.WriteLine(allUsers.Dump());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException.Message);
+            }
+        }
 
         static void Redis_GetAllKeys_Test()
         {
@@ -87,14 +109,40 @@ namespace ConsoleTests
             }
 
         }
+
+        static void Show_list_of_blogs()
+        {
+            var redisUsers = client.As<User>();
+            var redisBlogs = client.As<Blog>();
+            var mythz = new User { Id = redisUsers.GetNextSequence(), Name = "Demis Bellot" };
+
+            var mythzBlogs = new List<Blog> { 
+                    new Blog
+                    {
+                        Id = redisBlogs.GetNextSequence(),
+                        UserId = mythz.Id,
+                        UserName = mythz.Name,
+                        Tags = new List<string> { "Architecture", ".NET", "Redis" },
+                    },
+                    new Blog
+                    {
+                        Id = redisBlogs.GetNextSequence(),
+                        UserId = mythz.Id,
+                        UserName = mythz.Name,
+                        Tags = new List<string> { "Music", "Twitter", "Life" },
+                    }
+            };
+
+            mythzBlogs.ForEach(x => mythz.BlogIds.Add(x.Id));
+
+            redisUsers.Store(mythz);
+            redisBlogs.StoreAll(mythzBlogs);
+
+            //retrieve all blogs
+            var blogs = redisBlogs.GetAll();
+
+            Console.WriteLine(blogs.Dump());
+        }
     }
 
-    public class Person
-    {
-        public int Id { get; set; }
-
-        public string Name { get; set; }
-
-        public string Phone { get; set; }
-    }
 }
