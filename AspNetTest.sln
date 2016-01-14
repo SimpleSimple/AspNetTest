@@ -3,13 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest", "AspNetTest\AspNetTest.csproj", "{9634F02C-5EDD-481B-A51D-0FC972BC7E41}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D97965FB-ABCF-4812-A0C9-928C85196402}"
-	ProjectSection(SolutionItems) = preProject
-		AspNetTest.vsmdi = AspNetTest.vsmdi
-		Local.testsettings = Local.testsettings
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console.Test", "Console.Tests\Console.Test.csproj", "{F37E7F8E-A858-4CD0-B82B-62027E5F2B39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrieTreeConsole.Test", "TrieTreeConsole.Test\TrieTreeConsole.Test.csproj", "{0ED726AF-177D-4766-AC7C-26741E88BE4B}"
@@ -26,12 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest.MVC", "AspNetTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest.MVC.Tests", "AspNetTest.MVC.Tests\AspNetTest.MVC.Tests.csproj", "{A5E890D6-BF20-4E74-A956-50473D3137A7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC Presentation", "MVC Presentation", "{4FA676C4-A6E7-48A5-86F7-6135C42813BB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation.MVC", "Presentation.MVC", "{4FA676C4-A6E7-48A5-86F7-6135C42813BB}"
 EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = AspNetTest.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -136,7 +126,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{1F14B01E-7AAB-4BE3-A1DE-7F3C22C38EC4} = {4FA676C4-A6E7-48A5-86F7-6135C42813BB}
 		{A5E890D6-BF20-4E74-A956-50473D3137A7} = {4FA676C4-A6E7-48A5-86F7-6135C42813BB}
+		{1F14B01E-7AAB-4BE3-A1DE-7F3C22C38EC4} = {4FA676C4-A6E7-48A5-86F7-6135C42813BB}
 	EndGlobalSection
 EndGlobal
