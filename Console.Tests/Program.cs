@@ -13,11 +13,11 @@ namespace Console.Tests
 
         static void Main(string[] args)
         {
-            //ServiceStack.Licensing.RegisterLicense(@"1001-e1JlZjoxMDAxLE5hbWU6VGVzdCBCdXNpbmVzcyxUeXBlOkJ1c2luZXNzLEhhc2g6UHVNTVRPclhvT2ZIbjQ5MG5LZE1mUTd5RUMzQnBucTFEbTE3TDczVEF4QUNMT1FhNXJMOWkzVjFGL2ZkVTE3Q2pDNENqTkQyUktRWmhvUVBhYTBiekJGUUZ3ZE5aZHFDYm9hL3lydGlwUHI5K1JsaTBYbzNsUC85cjVJNHE5QVhldDN6QkE4aTlvdldrdTgyTk1relY2eis2dFFqTThYN2lmc0JveHgycFdjPSxFeHBpcnk6MjAxMy0wMS0wMX0=");
-            //var appHost = new AppHost();
-            //appHost.Init();
+            Console.WriteLine("1. 显示所有KEYS");
+            Console.WriteLine("2. 添加测试数据");
+            Console.WriteLine("3. 删除所有KEYS");
+            Console.WriteLine("4. 添加列表");
 
-            Console.WriteLine("1. 显示所有KEYS\r\n2. 添加测试数据\r\n3. 删除所有KEYS\r\n4. 添加列表");
             Console.Write("输入选择：");
             int command = int.Parse(Console.ReadLine());
             switch (command)

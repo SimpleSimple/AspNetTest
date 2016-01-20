@@ -45,6 +45,7 @@
     <Compile Include="MessageBox.cs" />
     <Compile Include="PageBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringHelper.cs" />
     <Compile Include="VerifyCodeImage.cs" />
     <Compile Include="WebQueryHelper.cs" />
     <Compile Include="YZMHelper.cs" />

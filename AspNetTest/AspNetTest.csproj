@@ -167,6 +167,7 @@
     <Content Include="js\page\example02.js" />
     <Content Include="js\page\webform1.js" />
     <Content Include="Example02.aspx" />
+    <Content Include="js\public.common.js" />
     <Content Include="Online.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
