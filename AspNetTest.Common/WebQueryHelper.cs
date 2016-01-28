@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AspNetTest.Utility
+namespace AspNetTest.Common
 {
     public class WebQueryHelper
     {
