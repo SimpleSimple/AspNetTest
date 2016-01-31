@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest", "AspNetTest\AspNetTest.csproj", "{9634F02C-5EDD-481B-A51D-0FC972BC7E41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console.Test", "Console.Tests\Console.Test.csproj", "{F37E7F8E-A858-4CD0-B82B-62027E5F2B39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSample.Test", "Console.Tests\RedisSample.Test.csproj", "{F37E7F8E-A858-4CD0-B82B-62027E5F2B39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrieTreeConsole.Test", "TrieTreeConsole.Test\TrieTreeConsole.Test.csproj", "{0ED726AF-177D-4766-AC7C-26741E88BE4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtility", "DBUtility\DBUtility.csproj", "{D9CB7A14-CB74-47AD-A0C9-60E8965E942D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Console.Test", "Project.Console.Test\Project.Console.Test.csproj", "{6F026B68-87D3-4117-AC2B-3C07D90F4C9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpLearning.Console.Test", "Project.Console.Test\CSharpLearning.Console.Test.csproj", "{6F026B68-87D3-4117-AC2B-3C07D90F4C9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANT.Model", "ANT.Model\ANT.Model.csproj", "{48923788-21FD-445F-B102-0763CC9E4305}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod.Console", "FactoryMethod.Console\FactoryMethod.Console.csproj", "{D3C270DD-AAB9-4DD5-83C8-6C3A8723C044}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjects.MVC", "TestProjects.MVC\TestProjects.MVC.csproj", "{278F51D8-7EA3-4163-8D48-C3979738CCB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication.Test", "ConsoleApplicatin.Test\ConsoleApplication.Test.csproj", "{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,16 @@ Global
 		{278F51D8-7EA3-4163-8D48-C3979738CCB3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{278F51D8-7EA3-4163-8D48-C3979738CCB3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{278F51D8-7EA3-4163-8D48-C3979738CCB3}.Release|x86.ActiveCfg = Release|Any CPU
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Debug|x86.ActiveCfg = Debug|x86
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Debug|x86.Build.0 = Debug|x86
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Release|Any CPU.ActiveCfg = Release|x86
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Release|x86.ActiveCfg = Release|x86
+		{C7BA6C1C-0CAF-4B75-A455-31EFDB3A1A14}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

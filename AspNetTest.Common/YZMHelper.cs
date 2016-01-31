@@ -3,7 +3,7 @@ using System.Web;
 using System.Drawing;
 using System.Security.Cryptography;
 
-namespace AspNetTest.Utility
+namespace AspNetTest.Common
 {
     /// <summary>
     /// 验证码类
