@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Blog.cs" />
+    <Compile Include="Entity\BlogPost.cs" />
+    <Compile Include="Entity\BlogPostComment.cs" />
     <Compile Include="Entity\Person.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Program.cs" />
@@ -73,7 +75,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

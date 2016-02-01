@@ -9,7 +9,7 @@ namespace Console.Tests
 
     class Program
     {
-        static RedisClient client = new RedisClient("127.0.0.1", 6370);
+        static RedisClient client = new RedisClient("172.16.41.237", 6379);
 
         static void Main(string[] args)
         {
@@ -17,6 +17,7 @@ namespace Console.Tests
             Console.WriteLine("2. 添加测试数据");
             Console.WriteLine("3. 删除所有KEYS");
             Console.WriteLine("4. 添加列表");
+            Console.WriteLine("5. 显示Blog列表");
 
             Console.Write("输入选择：");
             int command = int.Parse(Console.ReadLine());
@@ -33,6 +34,9 @@ namespace Console.Tests
                     break;
                 case 4:
                     Redis_AddList_Test();
+                    break;
+                case 5:
+                    Show_list_of_blogs();
                     break;
                 default: break;
             }
@@ -52,6 +56,8 @@ namespace Console.Tests
             }
         }
 
+        #region Private Static Methods
+
         static void Redis_GetAllKeys_Test()
         {
             Console.WriteLine("显示所有KEYS，共" + client.GetAllKeys().Count + "条");
@@ -64,16 +70,7 @@ namespace Console.Tests
 
         static void RedisClient_Test()
         {
-            //if (client.Set<Person>("person", new Person { Id = 0001, Name = "tangxueli", Phone = "13352336966" }))
-            //{
-            //    Console.WriteLine("录入实体成功");
-            //}
-            //else return;
-
-            //var person = client.Get<Person>("person");
-            //Console.WriteLine(string.Format("Id:{0}\r\nName:{1}\r\nPhone:{2}", person.Id, person.Name, person.Phone));
-
-            List<Person> list = new List<Person>() {
+            var list = new List<Person>{
                 new Person { Id = 0001, Name = "tangxueli", Phone = "13352336966" },
                 new Person{Id=0002, Name="tanglala", Phone="13132002536"},
                 new Person{Id=0003, Name="xuweiyi", Phone="13132002536"},
@@ -110,6 +107,87 @@ namespace Console.Tests
 
         }
 
+        static void Redis_AddTestData()
+        {
+            client.FlushAll();
+            InsertTestData();
+        }
+        static void InsertTestData()
+        {
+            var redisUsers = client.As<User>();
+            var redisBlogs = client.As<Blog>();
+            var redisBlogPosts = client.As<BlogPost>();
+
+            var yangUser = new User { Id = redisUsers.GetNextSequence(), Name = "Eric Yang" };
+
+            var yangBlog = new Blog
+            {
+                Id = redisBlogs.GetNextSequence(),
+                UserId = yangUser.Id,
+                UserName = yangUser.Name,
+                Tags = new List<string> { "Architecture", ".NET", "Databases" }
+            };
+
+            var blogPosts = new List<BlogPost> 
+            {
+                new BlogPost
+                {
+                    Id = redisBlogPosts.GetNextSequence(),
+                    BlogId = yangBlog.Id,
+                    Title = "Memcache",
+                    Categories = new List<string>{"NoSQL", "DocumentDB"},
+                    Tags = new List<string>{"Memcache","NoSQL","JSON",".NET"},
+                    Comments = new List<BlogPostComment>{
+                        new BlogPostComment{Content="First Comment!",CreatedDate=DateTime.UtcNow},
+                        new BlogPostComment{Content="Second Comment!",CreatedDate=DateTime.UtcNow}
+                    }
+                },
+                new BlogPost
+                {
+                    Id = redisBlogPosts.GetNextSequence(),
+                    BlogId = yangBlog.Id,
+                    Title = "Cassandra",
+                    Categories = new List<string> { "NoSQL", "Cluster" },
+                    Tags = new List<string> {"Cassandra", "NoSQL", "Scalability", "Hashing"},
+                    Comments = new List<BlogPostComment>
+                    {
+                        new BlogPostComment { Content = "First Comment!", CreatedDate = DateTime.UtcNow,}
+                    }
+                },
+            };
+
+            yangUser.BlogIds.Add(yangBlog.Id);
+            //yangBlog.BlogPostIds.AddRange(blogPosts.Where(x => x.BlogId == yangBlog.Id));
+
+            //var mythzBlogs = new List<Blog> { 
+            //        new Blog
+            //        {
+            //            Id = redisBlogs.GetNextSequence(),
+            //            UserId = mythz.Id,
+            //            UserName = mythz.Name,
+            //            Tags = new List<string> { "Architecture", ".NET", "Redis" },
+            //        },
+            //        new Blog
+            //        {
+            //            Id = redisBlogs.GetNextSequence(),
+            //            UserId = mythz.Id,
+            //            UserName = mythz.Name,
+            //            Tags = new List<string> { "Music", "Twitter", "Life" },
+            //        }
+            //};
+
+            //mythzBlogs.ForEach(x => mythz.BlogIds.Add(x.Id));
+
+            //redisUsers.Store(mythz);
+            //redisBlogs.StoreAll(mythzBlogs);
+
+            //retrieve all blogs
+            var blogs = redisBlogs.GetAll();
+
+            Console.WriteLine(blogs.Dump());
+        }
+
+
         static void Show_list_of_blogs()
         {
             var redisUsers = client.As<User>();
@@ -143,6 +221,8 @@ namespace Console.Tests
 
             Console.WriteLine(blogs.Dump());
         }
+
+        #endregion
     }
 
 }

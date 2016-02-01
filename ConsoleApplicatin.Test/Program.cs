@@ -21,6 +21,7 @@ namespace ConsoleApplication.Test
                 {
                     case 1:
                         Console.Write(GetWebRequest("http://localhost:29319/user/createvalidcode", "POST", ""));
+                        Console.WriteLine();
                         break;
                     case 2:
                         Console.Write("GUID:");
@@ -31,6 +32,7 @@ namespace ConsoleApplication.Test
                         Console.WriteLine();
                         string postData = string.Format("id={0}&code={1}", guid, vcode);
                         GetWebRequest("http://localhost:29319/user/register", "POST", postData);
+                        Console.WriteLine();
                         break;
                     case 0: break;
                     default: break;
