@@ -67,11 +67,13 @@
     <Compile Include="Entity\BlogPostComment.cs" />
     <Compile Include="Entity\Person.cs" />
     <Compile Include="Entity\User.cs" />
+    <Compile Include="Extensions\ListGenericExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Console.Tests.Entity;
 
 namespace Console.Tests
@@ -157,7 +158,11 @@ namespace Console.Tests
             };
 
             yangUser.BlogIds.Add(yangBlog.Id);
-            //yangBlog.BlogPostIds.AddRange(blogPosts.Where(x => x.BlogId == yangBlog.Id));
+            yangBlog.BlogPostIds.AddRange(blogPosts.Where(x => x.BlogId == yangBlog.Id).Select(x => x.Id));
+
+            redisUsers.Store(yangUser);
+            redisBlogs.StoreAll(new[] { yangBlog });
+            redisBlogPosts.StoreAll(blogPosts);
 
             //var mythzBlogs = new List<Blog> { 
             //        new Blog
@@ -182,9 +187,9 @@ namespace Console.Tests
             //redisBlogs.StoreAll(mythzBlogs);
 
             //retrieve all blogs
-            var blogs = redisBlogs.GetAll();
+            //var blogs = redisBlogs.GetAll();
 
-            Console.WriteLine(blogs.Dump());
+            //Console.WriteLine(blogs.Dump());
         }
 
 
@@ -221,6 +226,16 @@ namespace Console.Tests
 
             Console.WriteLine(blogs.Dump());
         }
+
+        #region 显示文章及其所有评论
+        static void Show_post_and_all_comments()
+        {
+            int postId = 1;
+            var redisBlogPosts = client.As<BlogPost>();
+            var blogPost = redisBlogPosts.GetById(postId);
+            Console.Write(blogPost.Dump());
+        }
+        #endregion
 
         #endregion
     }
