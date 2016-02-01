@@ -34,6 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\lib\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\lib\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,11 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
-    <Compile Include="DBCreateFactory.cs" />
+    <Compile Include="DatabaseUtils\Database.cs" />
+    <Compile Include="DatabaseUtils\DatabaseFactory.cs" />
+    <Compile Include="DatabaseUtils\IDatabase.cs" />
+    <Compile Include="DatabaseUtils\PgSQLHelper.cs" />
+    <Compile Include="DatabaseUtils\SQLHelper.cs" />
     <Compile Include="IPet.cs" />
     <Compile Include="PetFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DatabaseUtils\SQLServerFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
