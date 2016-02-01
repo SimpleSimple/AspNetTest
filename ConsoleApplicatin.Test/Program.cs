@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace ConsoleApplication.Test
 {
@@ -15,10 +16,12 @@ namespace ConsoleApplication.Test
             {
                 Console.WriteLine("1. 获取验证码");
                 Console.WriteLine("2. 请求注册用户");
+                Console.WriteLine("3. 请求99dcj网站，进行压力测试");
                 Console.WriteLine("退出请按 0 或 quit");
                 int no = Convert.ToInt32(Console.ReadLine());
                 switch (no)
                 {
+                    case 0: break;
                     case 1:
                         Console.Write(GetWebRequest("http://localhost:29319/user/createvalidcode", "POST", ""));
                         Console.WriteLine();
@@ -34,11 +37,16 @@ namespace ConsoleApplication.Test
                         GetWebRequest("http://localhost:29319/user/register", "POST", postData);
                         Console.WriteLine();
                         break;
-                    case 0: break;
+                    case 3:
+                        StartWebRequestTask();
+                        break;
                     default: break;
                 }
             }
         }
+
+
+        #region Private Static Methods
 
         static string GetWebRequest(string url, string method, string postData)
         {
@@ -67,5 +75,17 @@ namespace ConsoleApplication.Test
                 throw new Exception();
             }
         }
+
+        static void StartWebRequestTask()
+        {
+            Task task = new Task(() =>
+            {
+                for (int i = 1; i <= 100000; i++)
+                {
+                    Console.WriteLine(GetWebRequest("http://www.99ducaijing.com", "POST", ""));
+                }
+            });
+        }
+        #endregion
     }
 }
