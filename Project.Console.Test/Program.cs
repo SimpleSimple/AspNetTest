@@ -7,7 +7,11 @@
 
     class Program
     {
-
+        private class User
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+        }
 
         public static void Main(string[] args)
         {
@@ -23,5 +27,15 @@
             Console.WriteLine("A is {0}，B is {1} ", A, B);
         }
         #endregion
+
+        static void LinqExpression_Where_Test()
+        {
+            var users = new List<User> { 
+                new User{Id=1, Name="Cube"},
+                new User{Id=2, Name="Jimmy"}
+            };
+
+
+        }
     }
 }
