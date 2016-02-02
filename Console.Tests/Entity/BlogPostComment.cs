@@ -7,6 +7,10 @@ namespace Console.Tests.Entity
 {
     public class BlogPostComment
     {
+        public BlogPostComment()
+        {             
+        }
+
         public string Content { get; set; }
         public DateTime CreatedDate { get; set; }
     }

@@ -6,7 +6,7 @@ using System.Text;
 namespace Console.Tests.Entity
 {
     /// <summary>
-    ///  文章BlogPost实体
+    /// 文章BlogPost实体（包含标签、评论、类别）
     /// </summary>
     public class BlogPost
     {
