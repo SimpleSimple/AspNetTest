@@ -155,6 +155,7 @@
     <Content Include="log4net.config" />
     <None Include="Scripts\jquery-2.2.0.min.map" />
     <Content Include="Views\Flashplayer\Index.cshtml" />
+    <Content Include="Views\Flashplayer\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AspNetTest.Common\AspNetTest.Common.csproj">

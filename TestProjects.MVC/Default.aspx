@@ -11,6 +11,9 @@
     <div>
         This is defalut.aspx page
     </div>
+    <div class="container">
+        <a href="/Flashplayer/Index">Jump To Flashplayer</a>
+    </div>
     </form>
 </body>
 </html>
