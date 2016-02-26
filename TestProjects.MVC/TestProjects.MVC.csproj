@@ -164,6 +164,7 @@
     <Content Include="Views\Flashplayer\Index2.cshtml" />
     <Content Include="Views\Cache\Index.cshtml" />
     <Content Include="Views\Cache\Register.cshtml" />
+    <Content Include="Views\SMS\View1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AspNetTest.Common\AspNetTest.Common.csproj">
