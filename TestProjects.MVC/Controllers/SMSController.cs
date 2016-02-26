@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AspNetTest.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,8 +18,17 @@ namespace TestProjects.MVC.Controllers
 
         public ActionResult View1()
         {
-
             return View();
+        }
+
+        public ActionResult SendVerifyCode()
+        {
+            string phone = Request["phone"];
+            if (String.IsNullOrEmpty(phone))
+                return Json(new { errcode = 1001, errmsg = "手机号不能为空" });
+
+            WebRequestHelper.GetHtml(String.Format(SMS_REQUEST_WEBSITE, phone, MESSGAES_CONTENT));
+            return Json(new { errcode = 1, errmsg = "发送成功" });
         }
 
     }
