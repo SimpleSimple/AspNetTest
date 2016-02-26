@@ -21,7 +21,7 @@ namespace ConsoleApplication.Test
             Console.WriteLine("2. 请求注册用户");
             Console.WriteLine("3. 请求99dcj网站，进行压力测试");
             Console.WriteLine("4. 测试缓存接口");
-            
+
             while (1 == 1)
             {
                 Console.WriteLine("请输入执行序号：");
@@ -59,9 +59,9 @@ namespace ConsoleApplication.Test
                 }
             }
 
+        QUIT:
             Random_Generator_Test();
 
-        QUIT:
             Console.Write("已退出");
         }
 
@@ -137,10 +137,17 @@ namespace ConsoleApplication.Test
         static void Random_Generator_Test()
         {
             RandomHelper random = new RandomHelper();
+
             for (int i = 1; i <= 100000; i++)
             {
                 Loger.Info(random.Number(4, false));
+
             }
+
+            //for (int i = 1; i <= 100000; i++)
+            //{
+            //    Loger.Info(String.Join("", random.GenerateNumber(4)));
+            //}
             Console.WriteLine("生成结束");
         }
     }

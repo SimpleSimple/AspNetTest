@@ -11,7 +11,8 @@ namespace AspNetTest.Common
     {
         static Loger()
         {
-            var logConfigPath = AppDomain.CurrentDomain.BaseDirectory + @"\bin\log4net.Config";
+            var logConfigPath = AppDomain.CurrentDomain.BaseDirectory + @"\log4net.Config";
+            
             var fi = new FileInfo(logConfigPath);
             XmlConfigurator.Configure(fi);
             XmlConfigurator.ConfigureAndWatch(fi);

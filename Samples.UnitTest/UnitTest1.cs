@@ -13,7 +13,7 @@ namespace Samples.UnitTest
             RandomHelper random = new RandomHelper();
             for (int i = 1; i <= 100000; i++)
             {
-                Loger.Info(random.Number(4, false));
+                //Loger.Info(random.Number(4, false));
             }
         }
     }
