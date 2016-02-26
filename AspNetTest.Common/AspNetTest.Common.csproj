@@ -56,6 +56,7 @@
     <Compile Include="MessageBox.cs" />
     <Compile Include="PageBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomHelper.cs" />
     <Compile Include="StringHelper.cs" />
     <Compile Include="Utilities.cs" />
     <Compile Include="VerifyCode\VerifyCodeImage.cs" />
