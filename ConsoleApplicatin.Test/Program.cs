@@ -7,8 +7,11 @@ using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
+
 namespace ConsoleApplication.Test
 {
+    using AspNetTest.Common;
+
     class Program
     {
         static void Main(string[] args)
@@ -18,6 +21,7 @@ namespace ConsoleApplication.Test
             Console.WriteLine("2. 请求注册用户");
             Console.WriteLine("3. 请求99dcj网站，进行压力测试");
             Console.WriteLine("4. 测试缓存接口");
+            
             while (1 == 1)
             {
                 Console.WriteLine("请输入执行序号：");
@@ -55,13 +59,14 @@ namespace ConsoleApplication.Test
                 }
             }
 
+            Random_Generator_Test();
+
         QUIT:
             Console.Write("已退出");
         }
 
 
         #region Private Static Methods
-
         static string GetWebRequest(string url, string method, string postData)
         {
             try
@@ -128,5 +133,15 @@ namespace ConsoleApplication.Test
             }
         }
         #endregion
+
+        static void Random_Generator_Test()
+        {
+            RandomHelper random = new RandomHelper();
+            for (int i = 1; i <= 100000; i++)
+            {
+                Loger.Info(random.Number(4, false));
+            }
+            Console.WriteLine("生成结束");
+        }
     }
 }
