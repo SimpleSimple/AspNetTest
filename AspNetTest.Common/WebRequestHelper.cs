@@ -4,9 +4,9 @@ using System.Net;
 using System.Net.Security;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
-using System.Text;  
+using System.Text;
 
-namespace Chat.Common
+namespace AspNetTest.Common
 {
     /// <summary>
     /// Web请求帮助类

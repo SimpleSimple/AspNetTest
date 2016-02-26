@@ -20,15 +20,15 @@ namespace TestProjects.MVC.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public ActionResult SendVerifyCode()
         {
             string phone = Request["phone"];
             if (String.IsNullOrEmpty(phone))
-                return Json(new { errcode = 1001, errmsg = "手机号不能为空" });
+                return Json(new { errcode = 1001, errmsg = "手机号不能为空" }, JsonRequestBehavior.AllowGet);
 
             WebRequestHelper.GetHtml(String.Format(SMS_REQUEST_WEBSITE, phone, MESSGAES_CONTENT));
-            return Json(new { errcode = 1, errmsg = "发送成功" });
+            return Json(new { errcode = 1, errmsg = "发送成功" }, JsonRequestBehavior.AllowGet);
         }
 
     }
