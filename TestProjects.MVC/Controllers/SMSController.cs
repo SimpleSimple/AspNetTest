@@ -27,6 +27,16 @@ namespace TestProjects.MVC.Controllers
             if (String.IsNullOrEmpty(phone))
                 return Json(new { errcode = 1001, errmsg = "手机号不能为空" }, JsonRequestBehavior.AllowGet);
 
+            Random random=new Random();
+            string smsCode=random.Next(1000,9999).ToString();
+            if (CacheHelper.GetCache("Sms_" + phone) != null)
+            { 
+                //限制请求时间间隔
+            }
+            else
+            {
+                //CacheHelper.SetCache("Sms_"+phone,)
+            }
             WebRequestHelper.GetHtml(String.Format(SMS_REQUEST_WEBSITE, phone, MESSGAES_CONTENT));
             return Json(new { errcode = 1, errmsg = "发送成功" }, JsonRequestBehavior.AllowGet);
         }
