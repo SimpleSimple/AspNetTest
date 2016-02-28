@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Presentation.MVC", "1-Presentation.MVC", "{4FA676C4-A6E7-48A5-86F7-6135C42813BB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentation.MVC", "1.Presentation.MVC", "{4FA676C4-A6E7-48A5-86F7-6135C42813BB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-DesignPattern", "3-DesignPattern", "{A4077014-30B8-4D10-B128-0596F555F79E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.DesignPattern", "3.DesignPattern", "{A4077014-30B8-4D10-B128-0596F555F79E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Presentation.WebForm", "2-Presentation.WebForm", "{1563A6FB-5DC6-4167-916B-A460DEC043FE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Presentation.WebForm", "2.Presentation.WebForm", "{1563A6FB-5DC6-4167-916B-A460DEC043FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest", "AspNetTest\AspNetTest.csproj", "{9634F02C-5EDD-481B-A51D-0FC972BC7E41}"
 EndProject
