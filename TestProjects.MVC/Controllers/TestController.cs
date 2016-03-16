@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TestProjects.MVC.Models;
 
 namespace TestProjects.MVC.Controllers
 {
@@ -17,10 +18,13 @@ namespace TestProjects.MVC.Controllers
             Response.Write(ConnString);
             string strSql = "SELECT TOP 1000 * FROM [Gift163DB].[dbo].[Statistics]";
             DataSet ds = SqlHelper.ExecuteDataset(ConnString, CommandType.Text, strSql, null);
-            if (ds.Tables[0].Rows.Count > 0)
-                ds.Tables[0].ToList<Statistics>();
-
-            return View(ds.Tables[0]);
+            var list = new List<Statistics>();
+            if (ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
+            {
+                list = ds.Tables[0].ToList<Statistics>();
+                return View(list);
+            }
+            return View();
         }
 
     }

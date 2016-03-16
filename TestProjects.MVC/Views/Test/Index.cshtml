@@ -1,4 +1,4 @@
-﻿@using System.Data
+﻿@using TestProjects.MVC.Models;
 @{
     Layout = null;
 }
@@ -13,13 +13,13 @@
 <body>
     <div>
         <span>Data：</span>
-        @if (((DataTable)Model).Rows.Count > 0)
+        @if (Model != null && Model.Count > 0)
         {
-            foreach (DataRow row in Model)
+            foreach (Statistics obj in Model)
             {
-                @row["Name"]
-                @row["CreateTime"]
-                @row["TotalUsers"]
+                @obj.Id
+                @obj.Name
+                @obj.TotalUsers
             }
         }
     </div>
