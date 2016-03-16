@@ -1,0 +1,27 @@
+﻿@using System.Data
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <span>Data：</span>
+        @if (((DataTable)Model).Rows.Count > 0)
+        {
+            foreach (DataRow row in Model)
+            {
+                @row["Name"]
+                @row["CreateTime"]
+                @row["TotalUsers"]
+            }
+        }
+    </div>
+</body>
+</html>

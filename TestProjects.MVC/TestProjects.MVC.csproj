@@ -117,6 +117,7 @@
     <Compile Include="Controllers\FlashplayerController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SMSController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -127,6 +128,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Statistics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -152,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -168,11 +169,16 @@
     <Content Include="Views\Cache\Index.cshtml" />
     <Content Include="Views\Cache\Register.cshtml" />
     <Content Include="Views\SMS\ViewPage1.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AspNetTest.Common\AspNetTest.Common.csproj">
       <Project>{A180AAD8-4865-40A3-87AD-A823E8B796E7}</Project>
       <Name>AspNetTest.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{d9cb7a14-cb74-47ad-a0c9-60e8965e942d}</Project>
+      <Name>DBUtility</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
