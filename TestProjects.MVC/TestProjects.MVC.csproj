@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CacheController.cs" />
+    <Compile Include="Controllers\CrawlerController.cs" />
     <Compile Include="Controllers\FlashplayerController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SMSController.cs" />
@@ -171,6 +172,7 @@
     <Content Include="Views\Cache\Register.cshtml" />
     <Content Include="Views\SMS\ViewPage1.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Crawler\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AspNetTest.Common\AspNetTest.Common.csproj">

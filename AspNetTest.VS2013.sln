@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.UnitTest", "Samples
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest.Utilities", "AspNetTest.Utilities\AspNetTest.Utilities.csproj", "{4D9DF92D-0669-4FCB-A45D-B199B95682F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbHelperFactory", "DbHelperFactory\DbHelperFactory.csproj", "{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -201,6 +203,16 @@ Global
 		{4D9DF92D-0669-4FCB-A45D-B199B95682F8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{4D9DF92D-0669-4FCB-A45D-B199B95682F8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{4D9DF92D-0669-4FCB-A45D-B199B95682F8}.Release|x86.ActiveCfg = Release|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -217,5 +229,6 @@ Global
 		{644C3AC3-5F52-4023-A3AF-E1CB6CA98570} = {A4077014-30B8-4D10-B128-0596F555F79E}
 		{F37E7F8E-A858-4CD0-B82B-62027E5F2B39} = {767A4438-D90C-44A1-A298-E616D2CA64A6}
 		{26848F7D-BEBB-400D-B117-6437FB2CBBBA} = {767A4438-D90C-44A1-A298-E616D2CA64A6}
+		{0C2D9D66-C485-44DF-9E24-5BA7CA1C7B39} = {A4077014-30B8-4D10-B128-0596F555F79E}
 	EndGlobalSection
 EndGlobal
