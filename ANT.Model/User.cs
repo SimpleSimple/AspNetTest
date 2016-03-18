@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FactoryMethod.Console.Entities
+namespace AspNetTest.Model
 {
     public class User
     {

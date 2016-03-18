@@ -8,8 +8,8 @@
     <ProjectGuid>{48923788-21FD-445F-B102-0763CC9E4305}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ANT.Model</RootNamespace>
-    <AssemblyName>ANT.Model</AssemblyName>
+    <RootNamespace>AspNetTest.Model</RootNamespace>
+    <AssemblyName>AspNetTest.Model</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
