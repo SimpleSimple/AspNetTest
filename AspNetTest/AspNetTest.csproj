@@ -22,6 +22,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -279,9 +283,9 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ANT.Model\ANT.Model.csproj">
+    <ProjectReference Include="..\ANT.Model\AspNetTest.Model.csproj">
       <Project>{48923788-21FD-445F-B102-0763CC9E4305}</Project>
-      <Name>ANT.Model</Name>
+      <Name>AspNetTest.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\AspNetTest.Common\AspNetTest.Common.csproj">
       <Project>{A180AAD8-4865-40A3-87AD-A823E8B796E7}</Project>

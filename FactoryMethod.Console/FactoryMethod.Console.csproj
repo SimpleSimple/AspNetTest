@@ -55,7 +55,6 @@
     <Compile Include="DatabaseUtils\IDatabase.cs" />
     <Compile Include="DatabaseUtils\PgSQLHelper.cs" />
     <Compile Include="DatabaseUtils\SQLHelper.cs" />
-    <Compile Include="Entities\User.cs" />
     <Compile Include="IPet.cs" />
     <Compile Include="PetFactory.cs" />
     <Compile Include="Program.cs" />

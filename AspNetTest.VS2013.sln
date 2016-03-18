@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtility", "DBUtility\DBUt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpLearning.Console.Test", "Project.Console.Test\CSharpLearning.Console.Test.csproj", "{6F026B68-87D3-4117-AC2B-3C07D90F4C9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANT.Model", "ANT.Model\ANT.Model.csproj", "{48923788-21FD-445F-B102-0763CC9E4305}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest.Model", "ANT.Model\AspNetTest.Model.csproj", "{48923788-21FD-445F-B102-0763CC9E4305}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetTest.Common", "AspNetTest.Common\AspNetTest.Common.csproj", "{A180AAD8-4865-40A3-87AD-A823E8B796E7}"
 EndProject
