@@ -50,18 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
-    <Compile Include="BaseBusinessLogic.cs" />
-    <Compile Include="BaseSystemInfo.cs" />
-    <Compile Include="DataAccess.cs" />
-    <Compile Include="DataBaseType.cs" />
     <Compile Include="DatabaseUtils\Database.cs" />
     <Compile Include="DatabaseUtils\DatabaseFactory.cs" />
     <Compile Include="DatabaseUtils\IDatabase.cs" />
     <Compile Include="DatabaseUtils\PgSQLHelper.cs" />
     <Compile Include="DatabaseUtils\SQLHelper.cs" />
-    <Compile Include="DbHelperFactory.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="IDbHelper.cs" />
     <Compile Include="IPet.cs" />
     <Compile Include="PetFactory.cs" />
     <Compile Include="Program.cs" />
