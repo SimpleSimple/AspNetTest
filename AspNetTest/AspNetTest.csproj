@@ -227,6 +227,9 @@
       <DependentUpon>HandlerBase1.ashx</DependentUpon>
     </Compile>
     <Compile Include="Ashx\HandlerBase.cs" />
+    <Compile Include="Ashx\PostHandler.ashx.cs">
+      <DependentUpon>PostHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -314,6 +317,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ashx\HandlerBase1.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\PostHandler.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -9,7 +9,7 @@
 <body>
     <!-- 
         使用反射直接调用一般处理文件中的方法
-        -->
+    -->
     <form id="form1" runat="server">
         <div>
         </div>
@@ -18,9 +18,13 @@
     <script type="text/javascript">
         (function ($) {
             $(function () {
-                $.get("/Ashx/GetHandler.ashx", { "action": "add", "a": 1, "b": 2222 }, function (data) {
+                $.get("/Ashx/GetHandler.ashx", { "action": "Multiply", "a": 1, "b": 2222 }, function (data, status) {
                     alert(data);
-                }, "json");
+                });
+
+                $.post("/Ashx/PostHandler.ashx", { "action": "add", "a": 1, "b": 2222 }, function (data, status) {
+                    alert(data);
+                });
             });
         })(jQuery);
     </script>
