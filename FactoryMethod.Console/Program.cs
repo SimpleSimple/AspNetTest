@@ -6,8 +6,8 @@ using System.Text;
 
 namespace FactoryMethod.Console
 {
+    using AspNetTest.Model;
     using System;
-    using FactoryMethod.Console.Entities;
 
     class Program
     {
@@ -27,8 +27,8 @@ namespace FactoryMethod.Console
 
         static void ReflectorSample()
         {
-            var model = (User)Assembly.Load("FactoryMethod.Console").CreateInstance("Entities.User");
-            Console.Write(String.Format("Field1 : {0}  Field2 : {1}", model.Id, model.Name));
+            //var model = (User)Assembly.Load("AspNetTest.Model").CreateInstance(typeof("User"));
+            //Console.Write(String.Format("Field1 : {0}  Field2 : {1}", model.Id, model.Name));
         }
     }
 }

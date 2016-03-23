@@ -61,6 +61,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DatabaseUtils\SQLServerFactory.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ANT.Model\AspNetTest.Model.csproj">
+      <Project>{48923788-21fd-445f-b102-0763cc9e4305}</Project>
+      <Name>AspNetTest.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
