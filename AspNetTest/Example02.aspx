@@ -5,14 +5,17 @@
 <head runat="server">
     <title>同时在线人数</title>
     <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
-    
+
 </head>
 <body>
+    <!-- 
+        使用ECharts图表插件来做站点同时在线人
+    -->
     <form id="form1" runat="server">
-    <div class="pages">
-        <div id="main" style="width: 80%; height: 500px;">
+        <div class="pages">
+            <div id="main" style="width: 80%; height: 500px;">
+            </div>
         </div>
-    </div>
     </form>
     <script src="http://echarts.baidu.com/build/dist/echarts.js" type="text/javascript"></script>
 

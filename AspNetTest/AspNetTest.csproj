@@ -220,6 +220,13 @@
     <Compile Include="Ashx\AjaxHandler.ashx.cs">
       <DependentUpon>AjaxHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Ashx\GetHandler.ashx.cs">
+      <DependentUpon>GetHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\HandlerBase1.ashx.cs">
+      <DependentUpon>HandlerBase1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\HandlerBase.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -301,6 +308,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\GetHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\HandlerBase1.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
