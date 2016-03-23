@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- 
-        使用ECharts图表插件来做站点同时在线人
+        使用ECharts图表插件显示站点同时在线人数
     -->
     <form id="form1" runat="server">
         <div class="pages">
