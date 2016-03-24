@@ -80,6 +80,7 @@
     <Content Include="css\webform1.css" />
     <Content Include="Default.aspx" />
     <Content Include="Example01.aspx" />
+    <Content Include="Example03.aspx" />
     <Content Include="GetVCode.aspx" />
     <Content Include="Global.asax" />
     <Content Include="js\bootstrap\css\bootstrap-datetimepicker.css" />
@@ -243,6 +244,13 @@
     </Compile>
     <Compile Include="Example01.aspx.designer.cs">
       <DependentUpon>Example01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Example03.aspx.cs">
+      <DependentUpon>Example03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Example03.aspx.designer.cs">
+      <DependentUpon>Example03.aspx</DependentUpon>
     </Compile>
     <Compile Include="GetVCode.aspx.cs">
       <DependentUpon>GetVCode.aspx</DependentUpon>
