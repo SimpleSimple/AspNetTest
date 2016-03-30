@@ -14,6 +14,9 @@
     <form id="form1" runat="server">
     <div class="pages">
         <%=matchString %>
+        <div class="container">
+            Print String : <%=printStr %>
+        </div>
     </div>
     </form>
 </body>
