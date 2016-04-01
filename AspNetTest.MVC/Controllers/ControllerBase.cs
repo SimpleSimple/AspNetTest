@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace AspNetTest.MVC.Controllers
 {
-    public class BaseController : Controller
+    public class ControllerBase : Controller
     {
     }
 }
