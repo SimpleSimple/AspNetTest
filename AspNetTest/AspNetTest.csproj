@@ -180,6 +180,7 @@
     <Content Include="Example02.aspx" />
     <Content Include="js\public.common.js" />
     <Content Include="Online.aspx" />
+    <Content Include="SendXmlExample.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -276,6 +277,14 @@
     <Compile Include="Online.aspx.designer.cs">
       <DependentUpon>Online.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SendXmlExample.aspx.cs">
+      <DependentUpon>SendXmlExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendXmlExample.aspx.designer.cs">
+      <DependentUpon>SendXmlExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\XmlHelper.cs" />
     <Compile Include="ViewModels\OnlineStatsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
