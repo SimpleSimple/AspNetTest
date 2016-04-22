@@ -83,6 +83,7 @@
     <Content Include="Example03.aspx" />
     <Content Include="GetVCode.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="If_elseif_demo.aspx" />
     <Content Include="js\bootstrap\css\bootstrap-datetimepicker.css" />
     <Content Include="js\bootstrap\css\bootstrap-datetimepicker.min.css" />
     <Content Include="js\bootstrap\css\bootstrap.css" />
@@ -269,6 +270,13 @@
     </Compile>
     <Compile Include="Example02.aspx.designer.cs">
       <DependentUpon>Example02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="If_elseif_demo.aspx.cs">
+      <DependentUpon>If_elseif_demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="If_elseif_demo.aspx.designer.cs">
+      <DependentUpon>If_elseif_demo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Online.aspx.cs">
       <DependentUpon>Online.aspx</DependentUpon>
