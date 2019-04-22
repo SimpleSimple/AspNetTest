@@ -1,4 +1,3 @@
 # AspNetTest
 
-Dev Tools：
-VS2010
+开发工具：VS2010
